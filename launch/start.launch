@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+    <node name="TFBroadcaster_whole.py" pkg="grasping_point" type="TFBroadcaster_whole.py" >
+    </node>
+    <node name="after_assembly.py" pkg="grasping_point" type="after_assembly.py" output="screen">
+    </node>
+</launch>
