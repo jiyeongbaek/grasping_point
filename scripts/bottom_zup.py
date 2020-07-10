@@ -74,7 +74,7 @@ if __name__ == '__main__':
     rospy.sleep(1)
 
     grp_1st = ContinuousGraspCandid('grasping_point', 'STEFAN/grasping_point/assembly_line_1st_chairup.yaml')
-    grasp_point_1st = listener.transformPose(mdp.planning_frame, grp_1st.get_grasp_pose_msg(0, 0.6)) #transfrom msg to "base" frame
+    grasp_point_1st = listener.transformPose(mdp.planning_frame, grp_1st.get_grasp_pose_msg(0, 0.8)) #transfrom msg to "base" frame
     try:
         plan = mdp.group_1st.plan(grasp_point_1st)
         if plan.joint_trajectory.points:
@@ -101,11 +101,11 @@ if __name__ == '__main__':
     plan = mdp.group_2nd.plan(grasp_point_2nd)
     mdp.group_2nd.go()
     
-    rospy.sleep(1)
     touch_links = mdp.robot.get_link_names(group='panda_hands')
     mdp.scene.attach_mesh(mdp.group_3rd.get_end_effector_link(),
                           "assembly", touch_links=touch_links)
 
+    rospy.sleep(1)
 
     mdp.scene.add_box("box", mdp.box_pose, size = (1.2, 0.5, 0.15))
 

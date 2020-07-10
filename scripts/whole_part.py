@@ -20,32 +20,37 @@ class SceneObject():
         self.assembly_pose.pose.position.z = 0.601 #0.601
         self.assembly_pose.pose.orientation.w = 1.0
 
+        # self.assembly_pose.pose.position.x = 1.15
+        # self.assembly_pose.pose.position.y = -0.1
+        # self.assembly_pose.pose.position.z = 0.85 #0.601
+        # self.assembly_pose.pose.orientation.w = 1.0
+
         ## rotate chair goal position
-        # self.assembly_pose.pose.position.x = 1.15 #1.15
-        # self.assembly_pose.pose.position.y = 0.2
-        # self.assembly_pose.pose.position.z = 0.85
-        # self.assembly_pose.pose.orientation.x = 0.7071068
-        # self.assembly_pose.pose.orientation.y = 0.0
-        # self.assembly_pose.pose.orientation.z = 0.0
-        # self.assembly_pose.pose.orientation.w = 0.7071068
+        self.assembly_pose.pose.position.x = 1.15 #1.15
+        self.assembly_pose.pose.position.y = 0.05
+        self.assembly_pose.pose.position.z = 0.85
+        self.assembly_pose.pose.orientation.x = 0.7071068
+        self.assembly_pose.pose.orientation.y = 0.0
+        self.assembly_pose.pose.orientation.z = 0.0
+        self.assembly_pose.pose.orientation.w = 0.7071068
         
         # floor start position
-        self.assembly_pose.pose.position.x = 1.20 #1.15
-        self.assembly_pose.pose.position.y = -0.3
-        self.assembly_pose.pose.position.z = 0.751 #0.601
-        self.assembly_pose.pose.orientation.w = 1.0
+        # self.assembly_pose.pose.position.x = 1.20 #1.15
+        # self.assembly_pose.pose.position.y = -0.3
+        # self.assembly_pose.pose.position.z = 0.751 #0.601
+        # self.assembly_pose.pose.orientation.w = 1.0
 
         # floor goal position
-        self.assembly_pose.pose.position.x = 1.15 #1.15
-        self.assembly_pose.pose.position.y = -0.1
-        self.assembly_pose.pose.position.z = 1.0 #0.601
-        self.assembly_pose.pose.orientation.w = 1.0
+        # self.assembly_pose.pose.position.x = 1.15 #1.15
+        # self.assembly_pose.pose.position.y = -0.1
+        # self.assembly_pose.pose.position.z = 1.0 #0.601
+        # self.assembly_pose.pose.orientation.w = 1.0
 
         # renew test
-        self.assembly_pose.pose.position.x = 1.15 #1.15
-        self.assembly_pose.pose.position.y = -0.1
-        self.assembly_pose.pose.position.z = 0.8 #0.601
-        self.assembly_pose.pose.orientation.w = 1.0
+        # self.assembly_pose.pose.position.x = 1.10 #1.15
+        # self.assembly_pose.pose.position.y = -0.1
+        # self.assembly_pose.pose.position.z = 1.0 #0.601
+        # self.assembly_pose.pose.orientation.w = 1.0
 
         # self.assembly_pose.pose.orientation = Quaternion(*tf_conversions.transformations.quaternion_from_euler(radians(90), radians(90), radians(0), 'rxyz') )
 

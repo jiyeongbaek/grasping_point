@@ -79,16 +79,22 @@ if __name__ == '__main__':
         try:
             mdp.group_1st.plan(grasp_point)
             mdp.group_1st.go()
+            break
         except : 
             print("panda 1st fail ")
         try:
             mdp.group_2nd.plan(grasp_point)
             mdp.group_2nd.go()
+            break
         except : 
             print("panda 2nd fail")
         try:
             mdp.group_3rd.plan(grasp_point)
             mdp.group_3rd.go()
+            # break
         except : 
             print("panda 3rd fail")
 
+    for key, value in mdp.stefan.list.items():
+        mdp.scene.add_mesh(
+                key, value, mdp.stefan.stefan_dir + key + ".stl")

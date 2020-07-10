@@ -74,31 +74,31 @@ if __name__ == '__main__':
     listener.waitForTransform(
         "assembly_frame", mdp.planning_frame, rospy.Time(0), rospy.Duration(1.0))
 
-    # rospy.sleep(1)
-    # grp_1st = ContinuousGraspCandid('grasping_point', 'STEFAN/grasping_point/assembly_line_1st.yaml')
-    # grasp_point_1st = listener.transformPose(mdp.planning_frame, grp_1st.get_grasp_pose_msg(0, 0.5))  # transfrom msg to "base" frame
-    # try:
-    #     mdp.group_1st.plan(grasp_point_1st)
-    #     mdp.group_1st.go()
-    # except : 
-    #     print("1 ik ")
+    rospy.sleep(1)
+    grp_1st = ContinuousGraspCandid('grasping_point', 'STEFAN/grasping_point/assembly_line_1st.yaml')
+    grasp_point_1st = listener.transformPose(mdp.planning_frame, grp_1st.get_grasp_pose_msg(0, 0.5))  # transfrom msg to "base" frame
+    try:
+        mdp.group_1st.plan(grasp_point_1st)
+        mdp.group_1st.go()
+    except : 
+        print("1 ik ")
 
-    # grp_2nd = ContinuousGraspCandid(
-    #     'grasping_point', 'STEFAN/grasping_point/assembly_line_2nd.yaml')
-    # grasp_point_2nd = listener.transformPose(
-    #     mdp.planning_frame, grp_2nd.get_grasp_pose_msg(7, 0.3))  # transfrom msg to "base" frame
-    # try:
-    #     mdp.group_2nd.plan(grasp_point_2nd)
-    #     mdp.group_2nd.go()
-    # except:
-    #     print("ik error")
+    grp_2nd = ContinuousGraspCandid(
+        'grasping_point', 'STEFAN/grasping_point/assembly_line_2nd.yaml')
+    grasp_point_2nd = listener.transformPose(
+        mdp.planning_frame, grp_2nd.get_grasp_pose_msg(0, 0.3))  # transfrom msg to "base" frame
+    try:
+        mdp.group_2nd.plan(grasp_point_2nd)
+        mdp.group_2nd.go()
+    except:
+        print("ik error")
 
 
 
-    # grp_3rd = ContinuousGraspCandid('grasping_point', 'STEFAN/grasping_point/assembly_line_3rd.yaml')
-    # grasp_point_3rd = listener.transformPose(mdp.planning_frame, grp_3rd.get_grasp_pose_msg(0, 0.5))  # transfrom msg to "base" frame
-    # mdp.group_3rd.plan(grasp_point_3rd)
-    # mdp.group_3rd.go()
+    grp_3rd = ContinuousGraspCandid('grasping_point', 'STEFAN/grasping_point/assembly_line_3rd.yaml')
+    grasp_point_3rd = listener.transformPose(mdp.planning_frame, grp_3rd.get_grasp_pose_msg(0, 0.5))  # transfrom msg to "base" frame
+    mdp.group_3rd.plan(grasp_point_3rd)
+    mdp.group_3rd.go()
 
 
     # # mdp.scene.attach_mesh(mdp.group_left.get_end_effector_link(), "assembly")
